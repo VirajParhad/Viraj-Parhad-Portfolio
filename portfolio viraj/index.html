@@ -1,0 +1,307 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Viraj Ganesh Parhad - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #e0f7fa;
+      color: #000000; /* Pitch black font color in light mode */
+      display: flex;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    body.dark-mode {
+      background: #121212; /* Dark background in dark mode */
+      color: #ffffff; /* Bright white font color in dark mode */
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 180px;
+      background: #263238; /* Dark grey background in dark mode */
+      padding: 20px 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .sidebar a {
+      padding: 10px;
+      background: #37474f; /* Lighter grey background in dark mode */
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      width: 100%;
+      text-align: center;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .sidebar a:hover {
+      background: #455a64; /* Hover effect with a deeper grey */
+    }
+
+    .dark-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #0288d1;
+      color: white;
+      padding: 8px 14px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .main-content {
+      margin-left: 180px;
+      width: calc(100% - 180px);
+    }
+
+    header {
+      background: #37474f; /* Dark grey header background */
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 30px 8%;
+      background: #b3e5fc;
+      gap: 30px;
+    }
+
+    body.dark-mode .hero {
+      background: #1c1c1c; /* Dark background for hero section in dark mode */
+    }
+
+    .hero-img {
+      flex: 1;
+      text-align: center;
+    }
+
+    .hero-img img {
+      max-width: 280px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .hero-text {
+      flex: 2;
+    }
+
+    .hero-text h1 {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+    .hero-text p {
+      font-size: 16px;
+    }
+
+    section {
+      padding: 25px 8%;
+      background: #e1f5fe;
+      border-bottom: 1px solid #0288d1;
+    }
+
+    body.dark-mode section {
+      background: #1c1c1c; /* Dark background for sections in dark mode */
+      border-color: #37474f; /* Darker border color in dark mode */
+    }
+
+    section h2 {
+      font-size: 26px;
+      margin-bottom: 14px;
+      color: #01579b;
+    }
+
+    body.dark-mode section h2 {
+      color: #ffffff; /* White text for headings in dark mode */
+    }
+
+    ul {
+      list-style: disc inside;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+    }
+
+    .contact-links a {
+      color: #01579b;
+      text-decoration: none;
+      display: block;
+      margin: 6px 0;
+    }
+
+    body.dark-mode .contact-links a {
+      color: #bbdefb; /* Light blue links in dark mode */
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #263238; /* Dark grey footer background */
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .main-content {
+        margin-left: 0;
+        width: 100%;
+      }
+
+      .dark-btn {
+        position: relative;
+        margin: 10px auto;
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="sidebar">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
+    <a href="#interests">Additional Interests</a>
+    <a href="#languages">Languages</a>
+    <a href="#personal">Personal Details</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <button class="dark-btn" onclick="toggleDarkMode()">Dark Mode</button>
+
+  <div class="main-content">
+    <header>
+      <h1>Viraj Ganesh Parhad</h1>
+    </header>
+
+    <section class="hero">
+      <div class="hero-img">
+        <img src="c:\Users\Dell\Downloads\viraj.jpeg" alt="Viraj Ganesh Parhad">
+      </div>
+      <div class="hero-text">
+        <h1>Hello, I’m Viraj Ganesh Parhad</h1>
+        <p>A 1st Year Mechanical Engineering Student at MIT Academy of Engineering. I’m exploring the world of machines and innovation with curiosity and a passion to solve real-world problems.</p>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I’m a curious and motivated first-year student of Mechanical Engineering at MITAOE. I’m passionate about mechanical systems, product design, and thermodynamics. I enjoy learning hands-on skills in workshops and exploring technologies that improve real-world applications.</p>
+      <p>I’ve started building experience with tools like AutoCAD and SolidWorks, and I’m also improving my soft skills through activities like public speaking and teamwork. My goal is to contribute to sustainable and practical innovations in mechanical engineering.</p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>AutoCAD / SolidWorks – Basic 2D/3D Modeling</li>
+        <li>Workshop Practice – Drilling, Cutting, Filing</li>
+        <li>Problem Solving – Through Projects and Class Activities</li>
+        <li>Teamwork – Effective in Group Work and Labs</li>
+        <li>Web Development – Basic HTML, CSS, JavaScript</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <ul>
+        <li><strong>Mini Hydraulic Arm (Prototype):</strong> Designed and built a functional mini hydraulic arm using syringes and wood to demonstrate basic fluid mechanics principles.</li>
+        <li><strong>3D CAD Model: Gear Assembly:</strong> Developed a spur gear assembly using SolidWorks to gain hands-on experience with 3D modeling and mechanical design basics.</li>
+      </ul>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <ul>
+        <li><strong>MIT Academy of Engineering</strong> (2024–2028)<br>B-Tech</li>
+        <li><strong>Gayatri English medium school and jr. college</strong><br>11th & 12th Boards – 70%</li>
+      </ul>
+    </section>
+
+    <section id="interests">
+      <h2>Additional Interests</h2>
+      <ul>
+        <li>Gaming</li>
+        <li>Skecthing</li>
+        <li>Photography</li>
+        <li>Photo & Video Editing</li>
+      </ul>
+    </section>
+
+    <section id="languages">
+      <h2>Languages</h2>
+      <ul>
+        <li>Marathi</li>
+        <li>English</li>
+        <li>Hindi</li>
+      </ul>
+    </section>
+
+    <section id="personal">
+      <h2>Personal Details</h2>
+      <ul>
+        <li><strong>Name:</strong> Viraj Ganesh Parhad</li>
+        <li><strong>Date of Birth:</strong> 11 October 2006</li>
+        <li><strong>Gender:</strong> Male</li>
+        <li><strong>Marital Status:</strong> Single</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="contact-links">
+        <p>Email: <a href="mailto:virajparhad20@gmail.com.com">virajparhad20@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/viraj-parhad-273488341?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">linkedin.com/in/viraj-parhad</a></p>
+      </div>
+    </section>
+
+    <footer>
+      &copy; 2025 Viraj Ganesh Parhad. All rights reserved.
+    </footer>
+  </div>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+</body>
+</html>
